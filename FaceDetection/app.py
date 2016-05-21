@@ -115,8 +115,6 @@ def train():
     cascadePath = "FaceDetection/static/cascades/haarcascade_frontalface_default.xml"
     faceCascade = cv2.CascadeClassifier(cascadePath)
     recognizer = cv2.face.createLBPHFaceRecognizer()
-    # recognizer = cv2.face.createEigenFaceRecognizer()
-    # recognizer = cv2.face.createFisherFaceRecognizer()
     if os.path.isfile(faceCascadeFile):
         recognizer.load(faceCascadeFile)
 
