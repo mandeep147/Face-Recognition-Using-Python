@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="static/css/animate-custom.css" />
 </head>
-<body id="page-top" style="background-image:url('../static/images/background.jpg');background-repeat:no-repeat;background-size:cover">
+<body id="page-top" style="background-image:url('../static/images/glasses.png');background-repeat:no-repeat;background-size:cover">
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
            <div class="navbar-header">
@@ -53,11 +53,12 @@
         <div id="wrapper">
             <div id="login" class="animate form">
 
-  {%for person in peopleList:%}
+            {%for person in peopleList:%}
                 <div class="jumbotron">
-                    <h1>Hi, <strong>{{person.firstName}}&nbsp;{{person.lastName}}</strong> Welcome.</h1>
+                    <h1>Hi, <strong>{{person.firstName}}&nbsp;{{person.lastName}}</strong> <br>Welcome.</h1>br>
+                    </h1>
                 </div>
-                {%endfor%}
+            {%endfor%}
 
                 <p class="change_link"></p>
             </div>  
