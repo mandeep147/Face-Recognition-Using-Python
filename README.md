@@ -38,6 +38,9 @@ Framework: Flask
 	a.	 sudo pip install virtualenv virtualenvwrapper  
 	b.	 sudo rm -rf ~/.cache/pip  
 	c.	Update ~./bashrc file  
+	        # virtualenv and virtualenvwrapper    
+                export WORKON_HOME=$HOME/.virtualenvs    
+                source /usr/local/bin/virtualenvwrapper.sh			
 	d.	Reload the contents of bashrc file  
 		source ~/.bashrc  
 	e.	Make Virtual environment  
