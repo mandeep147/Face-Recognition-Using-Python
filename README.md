@@ -102,32 +102,35 @@ Framework: Flask
   
 V.	Install framework and set up database required for accessing application  
 
-	1.	pip install flask  
-	2.	Set up the database  
-		sudo apt-get install mysql-server  
-	3. Connect to mysql by username specified while installing it  
-		mysql -u <username> -p  
+1.	`pip install flask`  
+2.	Set up the database  
+	`sudo apt-get install mysql-server`  
+3. 	Connect to mysql by username specified while installing it  
+	`mysql -u <username> -p`  
   
 	a.	Create database   
-		CREATE DATABASE detect;  
+		`CREATE DATABASE detect;`  
 	b.	Create table  
-		CREATE TABLE detect.userDetails (
-		  id BIGINT NULL AUTO_INCREMENT,
-		  firstName VARCHAR(45) NULL,
-		  lastName VARCHAR(45) NULL,
-			PRIMARY KEY (id));  
-	4.	Connecting MySQL with Flask   
-		pip install flask-mysql
+		```
+		CREATE TABLE detect.userDetails (    
+		id BIGINT NULL AUTO_INCREMENT,    
+		firstName VARCHAR(45) NULL,    
+		lastName VARCHAR(45) NULL,    
+		PRIMARY KEY (id));
+		```    
+				
+	4.	Connecting MySQL with Flask      
+		`pip install flask-mysql`
 	
 	
 **Modify the username and password in app.py   
 
-**Exceuting the Application:**    
+**Running the Application:**    
 1. Clone the repository or download the zip  
 2. Navigate to the folder  
 3. Make sure you are in root directory of project  
 4. Run the server using  
-		workon cv (cv is name of virtual environment, you created while setting up the environment)
-		python runserver.py  
-5. To run the demo, go to localhost:3000 on the browser  
+		`workon cv` (cv is name of virtual environment, you created while setting up the environment)    
+		`python runserver.py`  
+5. To run the demo, go to `localhost:3000` on the browser  
 6. The app should be running  
