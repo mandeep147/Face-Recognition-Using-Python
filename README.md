@@ -11,30 +11,32 @@ Framework: Flask
 
 **Installing Python and OpenCV**    
 1.	Update apt-get manager and upgrade pre-installed packages (if any) using  
-	a.	sudo apt-get update  
-	b.	sudo apt-get upgrade  
+	a.	`sudo apt-get update`    
+	b.	`sudo apt-get upgrade`  
   
 2.	 Installing development tools  
-	sudo apt-get install build-essential cmake git pkg-config  
+	`sudo apt-get install build-essential cmake git pkg-config`   
 	cmake package : to configure our build   
   
 3.	Installing Image I/O packages needs to be loaded by OpenCV from disk  
-    sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev  
+    `sudo apt-get install libjpeg8-dev libtiff4-dev libjasper-dev libpng12-dev`  
    
 4.	Installing GTK development library, which highgui module of OpenCV depends on to display images on Screen:   
-	sudo apt-get install libgtk2.0-dev  
+	`sudo apt-get install libgtk2.0-dev`  
    
 5.	Packages for processing video-streams and accessing individual frames  
-	sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev  
+	`sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev`  
   
 6.	Libraries to optimize routines inside OpenCV  
-	sudo apt-get install libatlas-base-dev gfortran  
+	`sudo apt-get install libatlas-base-dev gfortran`  
    
 7.	Install “pip” – python package manager  
 	a.	wget https://bootstrap.pypa.io/get-pip.py   
 	b.	sudo python get-pip.py  
   
 8.	Install virtualenv and virtualenvwrapper – to create separate Python Environments for each project (not mandatory but recommended)  
+	
+	```
 	a.	 sudo pip install virtualenv virtualenvwrapper  
 	b.	 sudo rm -rf ~/.cache/pip  
 	c.	Update ~./bashrc file  
@@ -44,24 +46,32 @@ Framework: Flask
 	d.	Reload the contents of bashrc file  
 		source ~/.bashrc  
 	e.	Make Virtual environment  
-		mkvirtualenv cv  
+		mkvirtualenv cv
+	```      
   
 9.	Install Python 2.7 and numpy   	
+	```
 	a.	 sudo apt-get install python2.7-dev  
-	b.	 pip install numpy  
+	b.	 pip install numpy
+	```   
    
 10.	Install OpenCV and supporting modules   
+	```
 	cd ~  
 	git clone https://github.com/Itseez/opencv.git	   
 	cd opencv  
-	git checkout 3.0.0  
+	git checkout 3.0.0
+	```    
   
+	```
 	cd ~  
 	git clone https://github.com/Itseez/opencv_contrib.git	   
 	cd opencv_contrib  
-	git checkout 3.0.0  
+	git checkout 3.0.0
+	```  
   
 	Setup the build :   
+	```
 	cd ~/opencv  
 	mkdir build  
    
@@ -74,17 +84,24 @@ Framework: Flask
 		-D BUILD_EXAMPLES=ON ..  
   
 	Compile OpenCV   
-	make -j4  
+	make -j4
+	```   
    
 	Install OpenCV (if compied without error)  
-		sudo make install  
-		sudo ldconfig  
+	```
+		sudo make install         
+		sudo ldconfig
+	```  
    
 11.	Linking OpenCV with virtual environment “cv”  
+	```
 	cd ~/.virtualenvs/cv/lib/python2.7/site-packages/  
-	ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so  
+	ln -s /usr/local/lib/python2.7/site-packages/cv2.so cv2.so
+	```
+	
   
 V.	Install framework and set up database required for accessing application  
+
 	1.	pip install flask  
 	2.	Set up the database  
 		sudo apt-get install mysql-server  
@@ -100,7 +117,9 @@ V.	Install framework and set up database required for accessing application
 		  lastName VARCHAR(45) NULL,
 			PRIMARY KEY (id));  
 	4.	Connecting MySQL with Flask   
-		pip install flask-mysql  
+		pip install flask-mysql
+	
+	
 **Modify the username and password in app.py   
 
 **Exceuting the Application:**    
